@@ -1,0 +1,162 @@
+Haan. Ek PROJECT-NOTES.md file bana lete hain. Isme hum continuously track karenge ki project me kya bana rahe hain, kyun bana rahe hain, kya complete hua, aur next kya karna hai.
+
+Desktop ke Manoj-Marble-Visualizer folder ke andar PROJECT-NOTES.md file banao aur ye paste karo:
+
+Manoj Marble Visualizer — Project Notes
+🎯 Project Goal
+
+Manoj Marble ke liye ek professional website banana jisme apartment/building ke customers ko unke actual room/photo par selected marble ka realistic preview dikhaya ja sake.
+
+Main purpose:
+
+Customer ko marble physically imagine karne ki problem solve karna + Manoj Marble ke liye professional marketing aur lead generation karna.
+
+💡 Main Idea
+
+Jab hum kisi bade apartment/project me marketing ke liye jayenge:
+
+Customer ke room/apartment ki photo lenge.
+Website me photo upload karenge.
+Manoj Marble ka particular marble select karenge.
+AI us marble ko room ke relevant surface par visualize karega.
+Customer ko Before → AI Preview dikhayenge.
+Customer interested ho to quotation/enquiry bhej sakta hai.
+Enquiry WhatsApp par Manoj Marble ko bheji ja sakti hai.
+Example
+Customer's Actual Room Photo
+            ↓
+     Upload to Website
+            ↓
+     Select Marble
+            ↓
+       AI Visualizer
+            ↓
+  Realistic Marble Preview
+            ↓
+     Request Quotation
+            ↓
+         WhatsApp
+🏗️ Development Plan
+V1 — Basic Professional Website
+ Home page
+ Manoj Marble branding
+ Marble catalogue
+ Marble product cards
+ Product details
+ Upload room photo
+ Select marble
+ Basic visualizer UI
+ Quotation/enquiry form
+ WhatsApp enquiry
+V2 — AI Visualizer
+ Connect AI image generation API
+ Send room photo + selected marble
+ Generate realistic preview
+ Show original and generated image
+ Improve prompt/quality
+ Handle generation errors/loading
+V3 — Business Integration
+ Connect MongoDB
+ Store marble products
+ Store customer enquiries
+ Connect with Marble Management System
+ Show real stock/availability
+ Generate quotation
+V4 — Advanced Features
+
+Possible future features:
+
+ Multiple room types
+ Floor visualization
+ Wall visualization
+ Kitchen platform visualization
+ Bathroom visualization
+ Before/After slider
+ Customer quotation PDF
+ Admin dashboard
+ Customer enquiry tracking
+🛠️ Planned Technology
+Frontend
+React
+CSS / Tailwind CSS
+Backend
+Node.js
+Express.js
+Database
+MongoDB
+AI
+AI image generation/editing API
+Communication
+WhatsApp enquiry
+📁 Project Structure
+
+Current stage:
+
+Manoj-Marble-Visualizer/
+│
+└── PROJECT-NOTES.md
+
+This will change as development starts.
+
+📌 Important Development Rule
+
+Don't build everything at once.
+
+Development order:
+
+Website UI
+   ↓
+Catalogue
+   ↓
+Photo Upload
+   ↓
+Visualizer UI
+   ↓
+AI Integration
+   ↓
+Quotation
+   ↓
+WhatsApp
+   ↓
+Database
+   ↓
+Management System Integration
+🧠 Why We Are Building This
+
+Traditional marble marketing:
+
+Shop → Catalogue → Explain marble → Customer imagines result
+
+Our approach:
+
+Customer's actual apartment
+          ↓
+       Our marble
+          ↓
+    Visual preview
+          ↓
+Customer sees the result
+
+The second approach should make the sales conversation more concrete.
+
+⚠️ Current Status
+
+Project Started: 19 August 2026
+
+Current Phase: Project setup
+
+Completed:
+
+ Project idea finalized
+ Project folder created/planned
+ Development plan created
+
+Currently Working On:
+
+Project initialization
+
+Next Step:
+
+Set up the React frontend
+
+Important: We will update this file whenever we complete an important feature or change the project direction.

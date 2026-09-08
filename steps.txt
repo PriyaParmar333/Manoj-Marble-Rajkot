@@ -1,0 +1,39 @@
+Step 1 — React project create karo
+
+VS Code open karo → Manoj-Marble-Visualizer folder open karo.
+
+Terminal me ye command run karo:
+
+npm create vite@latest frontend
+
+It will ask:
+
+Select a framework:
+> React
+
+
+Select a variant:
+> JavaScript
+
+Then:
+
+cd frontend
+npm install
+npm run dev
+
+Browser me jo localhost URL aaye, usually:
+
+http://localhost:5173
+
+open karo.
+
+Expected folder structure
+Manoj-Marble-Visualizer/
+│
+├── PROJECT-NOTES.md
+│
+└── frontend/
+    ├── src/
+    ├── public/
+    ├── package.json
+    └── ...
