@@ -129,7 +129,109 @@ const loginOwner = async (req, res) => {
   }
 };
 
+
+// ===============================
+// CHANGE OWNER CREDENTIALS
+// ===============================
+
+const changeOwnerCredentials = async (req, res) => {
+  try {
+    const {
+      currentPassword,
+      newEmail,
+      newPassword,
+    } = req.body;
+
+    if (!currentPassword || !newEmail || !newPassword) {
+      return res.status(400).json({
+        success: false,
+        message:
+          "Current password, new email and new password are required",
+      });
+    }
+
+    if (newPassword.length < 6) {
+      return res.status(400).json({
+        success: false,
+        message: "New password must be at least 6 characters",
+      });
+    }
+
+    const user = await User.findById(req.user.userId);
+
+    if (!user) {
+      return res.status(404).json({
+        success: false,
+        message: "Owner not found",
+      });
+    }
+
+    if (user.role !== "owner") {
+      return res.status(403).json({
+        success: false,
+        message: "Only owner can change credentials",
+      });
+    }
+
+    const isCurrentPasswordCorrect =
+      await bcrypt.compare(
+        currentPassword,
+        user.password
+      );
+
+    if (!isCurrentPasswordCorrect) {
+      return res.status(401).json({
+        success: false,
+        message: "Current password is incorrect",
+      });
+    }
+
+    const emailExists = await User.findOne({
+      email: newEmail,
+      _id: { $ne: user._id },
+    });
+
+    if (emailExists) {
+      return res.status(409).json({
+        success: false,
+        message: "This email is already in use",
+      });
+    }
+
+    const hashedPassword = await bcrypt.hash(
+      newPassword,
+      10
+    );
+
+    user.email = newEmail;
+    user.password = hashedPassword;
+
+    await user.save();
+
+    res.status(200).json({
+      success: true,
+      message:
+        "Owner email and password updated successfully",
+    });
+
+  } catch (error) {
+    console.error(
+      "Change credentials error:",
+      error
+    );
+
+    res.status(500).json({
+      success: false,
+      message:
+        "Failed to update owner credentials",
+      error: error.message,
+    });
+  }
+};
+
+
 module.exports = {
   registerOwner,
   loginOwner,
+  changeOwnerCredentials,
 };

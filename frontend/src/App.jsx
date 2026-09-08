@@ -649,7 +649,7 @@ function App() {
 
           <p className="hero-description">
             Discover premium Indian and Italian
-            marble, granite and glass selected
+            marble, granite   selected
             for elegant homes, apartments and
             commercial spaces.
           </p>
@@ -784,7 +784,7 @@ function App() {
             "Indian Marble",
             "Italian Marble",
             "Granite",
-            "Glass",
+
           ].map((item) => (
 
             <button
@@ -1304,9 +1304,7 @@ function App() {
                         Granite
                       </option>
 
-                      <option value="Glass">
-                        Glass
-                      </option>
+
 
                     </select>
 
@@ -1669,9 +1667,7 @@ function App() {
                         Granite
                       </option>
 
-                      <option value="Glass">
-                        Glass
-                      </option>
+
 
                     </select>
 
