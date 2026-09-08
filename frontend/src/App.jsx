@@ -3,7 +3,7 @@ import "./App.css";
 import Login from "./Login";
 const API_URL =
   import.meta.env.VITE_API_URL ||
-  "http://localhost:5000/api/products";
+  "https://manoj-marble-backend.onrender.com/api/products";
 
 function App() {
   // =========================================
